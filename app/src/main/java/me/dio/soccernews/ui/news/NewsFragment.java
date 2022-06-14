@@ -10,6 +10,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.google.android.material.snackbar.Snackbar;
+
+import me.dio.soccernews.R;
 import me.dio.soccernews.databinding.FragmentNewsBinding;
 import me.dio.soccernews.ui.adapters.NewsAdapter;
 
@@ -24,16 +27,37 @@ public class NewsFragment extends Fragment {
         binding = FragmentNewsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+
         binding.rvNews.setLayoutManager(new LinearLayoutManager(getContext()));
-        newsViewModel.getNews().observe(getViewLifecycleOwner(), news -> {
-            binding.rvNews.setAdapter(new NewsAdapter(news));
-        });
+        observeNews();
+        observeStates();
+
+        binding.srlNews.setOnRefreshListener(newsViewModel::findNews);
 
         return root;
     }
 
+    private void observeStates() {
+        newsViewModel.getState().observe(getViewLifecycleOwner(), state -> {
+            switch (state) {
+                case DOING:
+                    binding.srlNews.setRefreshing(true);
+                    break;
+                case DONE:
+                    binding.srlNews.setRefreshing(false);
+                    break;
+                case ERROR:
+                    binding.srlNews.setRefreshing(false);
+                    Snackbar.make(binding.srlNews, R.string.error_network, Snackbar.LENGTH_SHORT).show();
+            }
+        });
+    }
 
-
+    private void observeNews() {
+        newsViewModel.getNews().observe(getViewLifecycleOwner(), news -> {
+            binding.rvNews.setAdapter(new NewsAdapter(news, newsViewModel::saveNews));
+        });
+    }
 
 
     @Override
