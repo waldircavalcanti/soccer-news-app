@@ -3,3 +3,6 @@ App Nativo Android de Notícias Sobre Futebol
 
 1. Android Jetpack e Material Design
    - [release/desenvolvimento-mobile-nativo-para-android](https://github.com/waldircavalcanti/soccer-news-app/tree/release/android-jetpack-material-design)
+
+2. Abstraindo o Domínio, consumo de APIs e persistência de Dados
+   - [release/abstraindo-dominio-consumo-de-apis-e-room](https://github.com/waldircavalcanti/soccer-news-app/tree/release/abstraindo-dominio-consumo-de-apis-e-room)
