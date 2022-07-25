@@ -1,5 +1,5 @@
 # Soccer News App
-App Nativo Android de Notícias Sobre Futebol. Este repositório foi organizado em algumas branches que representam as implementações realizadas.
+App Nativo Android de Notícias Sobre Futebol desenvolvido no Santander Bootcamp Mobile Developer 2022. Este repositório foi organizado em algumas branches que representam as implementações realizadas.
 
 1. Android Jetpack e Material Design
    - [release/desenvolvimento-mobile-nativo-para-android](https://github.com/waldircavalcanti/soccer-news-app/tree/release/android-jetpack-material-design)
