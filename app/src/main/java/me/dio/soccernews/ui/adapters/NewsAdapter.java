@@ -47,6 +47,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         holder.binding.tvDescription.setText(news.description);
         Picasso.get().load(news.image).fit().into(holder.binding.ivThumbnail);
 
+
         //Open Link implementation
         holder.binding.btOpenLink.setOnClickListener(view -> {
             Intent i = new Intent(Intent.ACTION_VIEW);
@@ -70,11 +71,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             notifyItemChanged(position);
         });
 
-        if (news.favorite){
-            holder.binding.ivFavorite.setColorFilter(ContextCompat.getColor(context, R.color.purple_500));
-        }else {
+//        if (news.favorite){
+//            holder.binding.ivFavorite.setColorFilter(ContextCompat.getColor(context,R.color.favorite_active));
+//        }else {
+//            holder.binding.ivFavorite.setColorFilter(ContextCompat.getColor(context,R.color.favorite_inactive));
+//        }
 
-        }
+
+        int favoriteColor = news.favorite ? R.color.favorite_active : R.color.favorite_inactive;
+        holder.binding.ivFavorite.setColorFilter(ContextCompat.getColor(context, favoriteColor));
     }
 
     @Override

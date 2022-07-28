@@ -35,6 +35,7 @@ public class NewsFragment extends Fragment {
         binding.srlNews.setOnRefreshListener(newsViewModel::findNews);
 
         return root;
+
     }
 
     private void observeStates() {
