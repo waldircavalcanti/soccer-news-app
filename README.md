@@ -12,12 +12,12 @@ App Nativo Android de Notícias Sobre Futebol desenvolvido no Santander Bootcamp
   <p align="left">
 
 <img alt="no tasks"
-            src="https://github.com/waldircavalcanti/coin-converter-carrefour/blob/main/Screenshot_1.png" width="30%"
+            src="https://github.com/waldircavalcanti/soccer-news-app/blob/main/Screenshot_1.png" width="30%"
             title="no tasks">
   <img alt="create task"
-            src="https://github.com/waldircavalcanti/coin-converter-carrefour/blob/main/Screenshot_2.png" width="30%"
+            src="https://github.com/waldircavalcanti/soccer-news-app/blob/main/Screenshot_2.png" width="30%"
             title="create task">
   <img alt="all tasks"
-            src="https://github.com/waldircavalcanti/coin-converter-carrefour/blob/main/Screenshot_3.png" width="30%"
+            src="https://github.com/waldircavalcanti/soccer-news-app/blob/main/Screenshot_3.png" width="30%"
             title="all tasks">
     
